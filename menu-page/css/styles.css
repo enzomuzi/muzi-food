@@ -79,3 +79,13 @@ header, .navbar {
     font: 20px bold;
     font-family: 'Roboto', sans-serif;
 }
+
+/* Responsivo */
+@media(max-width: 768px) {
+    /* geral */
+body {
+    padding: 20px 0;
+    }
+    /* slider */
+    
+}

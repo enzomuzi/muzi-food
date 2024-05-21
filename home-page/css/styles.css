@@ -81,3 +81,6 @@ header, .navbar {
     font-family: 'Roboto', sans-serif;
 }
 
+.slides {
+    transition: .5s;
+}
