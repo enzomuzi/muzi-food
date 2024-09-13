@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Muzi's Food</title>
     <!-- Fonte -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <h1 class="navbar-brand" id="logo">Muzi's Food</h1>
-        <button class="navbar-toggler" type="button" data-toggle="colapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
@@ -41,23 +41,23 @@
             <div class="col-md-6">
                 <div id="carouselExampleFade" class="carousel slide carousel-fade">
                     <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="100">
-                            <img src="./assets/home-page/img/img-carousel-1.png" class="d-block w-100" alt="...">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="./assets/home-page/img/img-carousel-1.png" class="d-block w-100" alt="Primeiro Slide">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/home-page/img/img-carousel-2.png" class="d-block w-100" alt="...">
+                            <img src="./assets/home-page/img/img-carousel-2.png" class="d-block w-100" alt="Segundo Slide">
                         </div>
                         <div class="carousel-item">
-                            <img src="./assets/home-page/img/img-carousel.png" class="d-block w-100" alt="...">
+                            <img src="./assets/home-page/img/img-carousel.png" class="d-block w-100" alt="Terceiro Slide">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                        <span class="visually-hidden">Anterior</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                        <span class="visually-hidden">Próximo</span>
                     </button>
                 </div>
             </div>
