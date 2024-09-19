@@ -1,7 +1,13 @@
 <?php
 
-use core\Router;
+class Routes 
+{
+    private $method;
 
-$router = new Router();
+    public function __construct()
+    {
+        var_dump("teste");
+    }
 
-$router->get('/', 'HomeController@index');
+   
+}
