@@ -16,13 +16,26 @@ class Routes
         switch ($this->method) {
             case "GET": 
                 // verificar rota de contato
-
+                if($this->route == "/contact") {
+                    include_once "../app/views/contact-page.php";
+                    exit;
+                }
                 //verificar rota de login
-
+                if($this->route == "/login") {
+                    include_once "../app/views/login-page.php";
+                    exit;
+                }
                 // verificar rota de menu
-
+                if($this->route == "/menu") {
+                    include_once "../app/views/menu-page.php";
+                    exit;
+                }
                 // verificar rota de registro
-
+                if($this->route == "/register") {
+                    include_once "../app/views/register-page.php";
+                    exit;
+                }
+                //verificar rota de home
                 if($this->route == "/" || $this->route == "/home") {
                     include_once "../public/index.php";
                 } else {
