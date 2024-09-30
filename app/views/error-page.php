@@ -19,11 +19,18 @@
     <script src="https://kit.fontawesome.com/fd3baf7e36.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Oops!</h1>
-    <h2>Não encontramos a página que você tentou acessar</h2>
-    <p>Verifique o link ou clique no botão abaixo para retornar a página inicial.</p>
-    <a href="#">Acessar a página inicial</a>
-    <img src="/public/error-page/img/error.jpg" alt="Error 404">
+    <div class="body-content">
+    <div class="text-body">
+        <h1>Oops!</h1>
+        <h2>Não encontramos a página que você tentou acessar</h2>
+        <p>Verifique o link ou clique no botão abaixo para retornar a página inicial.</p>
+        <a class="button" href="#" class="link-button">Acessar a página inicial</a>
+
+    </div>
+    
+    <img class="img" src="/public/error-page/img/error.jpg" alt="Error 404">
+    </div>
     </body>
+    
 </html>
 
