@@ -6,7 +6,7 @@
 }
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #d9d9d9;
+  background-color: #f4f4f4;
 }
 .row {
   margin: 0;
@@ -54,7 +54,7 @@ header,
 .card-item {
   display: flex;
   justify-content: center;
-  background-color: #d9d9d9;
+  background-color: #f4f4f4;
 }
 .card-price {
   font: 20px bold;
