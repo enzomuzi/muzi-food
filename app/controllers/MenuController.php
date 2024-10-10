@@ -12,5 +12,6 @@ class MenuController
     {
         // Instanciar o modelo de orders
         $this->model = new OrdersModel();
+        $this->model = new ProductsModel();
     }
 }

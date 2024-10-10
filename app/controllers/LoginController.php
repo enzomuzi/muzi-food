@@ -1,6 +1,8 @@
 <?php
 
 require_once __DIR__ . '/../models/ClientsModel.php';  // Caminho relativo do controlador para o modelo
+require_once __DIR__ . '/../models/UsersModel.php';  // Caminho relativo do controlador para o modelo
+
 
 class LoginController
 {
@@ -10,5 +12,6 @@ class LoginController
     {
         // Instanciar o modelo de clients
         $this->model = new ClientsModel();
+        $this->model = new UsersModel();
     }
 }
