@@ -1,31 +1,20 @@
 <?php
 
+require_once __DIR__ . '/../../config/database/ConnectDb.php';
 class ContactModel
 {
+    private $connect;
     public $connection;
 
-    // Método para conectar ao banco de dados
-    public function connectDB()
-    {
-        $this->connection = mysqli_connect('localhost', 'root', '', 'Muzi_Food');
-        
-        if (mysqli_connect_errno()) {
-            echo "Erro ao conectar ao banco de dados: " . mysqli_connect_error();
-            return false;
-        }
-
-        return $this->connection;
-    }
 
     public function __construct()
     {
-        // Chama o método connectDB dentro da classe
-        $this->connection = $this->connectDB();
+        $this->connect = new ConnectDb();
+        $this->connect = $this->connect->connection();
+    }
 
-        if (!$this->connection) {
-            return;
-        }
-
+    public function buscarContatos()
+    {
         $result = mysqli_query($this->connection, "SELECT * FROM contacts");
 
         if (!$result) {

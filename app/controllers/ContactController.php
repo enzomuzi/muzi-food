@@ -1,6 +1,6 @@
 <?php
 
-require_once '../models/ContactModel.php';  // Caminho relativo do controlador para o modelo
+require_once __DIR__ . '/../models/ContactModel.php';  // Caminho relativo do controlador para o modelo
 
 class ContactController
 {
@@ -10,5 +10,10 @@ class ContactController
     {
         // Instanciar o modelo de contato
         $this->model = new ContactModel();
+    }
+
+    public function buscarContatos()
+    {
+        return $this->model->buscarContatos();
     }
 }

@@ -1,14 +1,19 @@
 <?php
 
+require_once __DIR__ . '/../app/controllers/ContactController.php';
+
 class Routes 
 {
     private $method;
     private $route;
+    private $contactController; // -> variavel que sera utilizado para armazenar a instancia do controller
 
     public function __construct()
     {
         $this->method = $_SERVER['REQUEST_METHOD'];
         $this->route = $_SERVER['REQUEST_URI'];
+        $this->contactController = new ContactController();
+
         $this->routes();
     }
 
@@ -17,6 +22,7 @@ class Routes
             case "GET": 
                 // verificar rota de contato
                 if($this->route == "/contact") {
+                    var_dump($this->contactController->buscarContatos()); // -> se nao der nenhum erro, deu certo
                     include_once "../app/views/contact-page.php";
                     exit;
                 }
