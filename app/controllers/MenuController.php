@@ -1,6 +1,8 @@
 <?php
 
 require_once __DIR__ . '/../models/OrdersModel.php';  // Caminho relativo do controlador para o modelo
+require_once __DIR__ . '/../models/ProductsModel.php'; // Caminho relativo do controlador para o modelo
+
 
 class MenuController
 {
