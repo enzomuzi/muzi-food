@@ -43,34 +43,30 @@
                 <h1>Registre-se agora mesmo!</h1>
                 <p>Insira suas informações abaixo.</p>
             </div>
-            <form class="row g-3">
+            <form class="row g-3" action="/registrar" method="POST">
             <div class="col-md-6">
                     <label for="inputFirstName4" class="form-label">Nome</label>
-                    <input type="text" class="form-control" aria-label="First name" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="inputLastName4" class="form-label">Sobrenome</label>
-                    <input type="text" class="form-control" aria-label="Last name" required>
+                    <input name="name" type="text" class="form-control" aria-label="First name" required>
                 </div>
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" required>
+                    <input name="email" type="email" class="form-control" id="inputEmail4" required>
                 </div>
                 <div class="col-md-6">
                     <label for="inputPassword4" class="form-label">Senha</label>
-                    <input type="password" class="form-control" id="inputPassword4" required>
+                    <input name="password" type="password" class="form-control" id="inputPassword4" required>
                 </div>
                 <div class="col-md-6">
                     <label for="inputPassword4" class="form-label">Confirme sua senha</label>
-                    <input type="password" class="form-control" id="inputPassword4" required>
+                    <input name="confirmed_password" type="password" class="form-control" id="inputPassword4" required>
                 </div>
                 <div class="col-md-2">
                     <label for="inputNumber" class="form-label">Telefone</label>
-                    <input type="text" class="form-control" id="inputNumber" required>
+                    <input name="phone" type="text" class="form-control" id="inputNumber" required>
                 </div>
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <input name="terms_accept" class="form-check-input" type="checkbox" id="gridCheck">
                         <label class="form-check-label" for="gridCheck" required>
                             Aceito os termos e condições
                         </label>

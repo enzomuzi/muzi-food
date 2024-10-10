@@ -1,18 +1,23 @@
 <?php
 
 require_once __DIR__ . '/../app/controllers/ContactController.php';
+require_once __DIR__ . '/../app/controllers/RegisterController.php';
 
 class Routes 
 {
     private $method;
     private $route;
     private $contactController; // -> variavel que sera utilizado para armazenar a instancia do controller
+    private $registerController;
+    private $post;
 
     public function __construct()
     {
         $this->method = $_SERVER['REQUEST_METHOD'];
         $this->route = $_SERVER['REQUEST_URI'];
         $this->contactController = new ContactController();
+        $this->registerController = new RegisterController();
+        $this->post = $_POST;
 
         $this->routes();
     }
@@ -22,7 +27,6 @@ class Routes
             case "GET": 
                 // verificar rota de contato
                 if($this->route == "/contact") {
-                    var_dump($this->contactController->buscarContatos()); // -> se nao der nenhum erro, deu certo
                     include_once "../app/views/contact-page.php";
                     exit;
                 }
@@ -52,7 +56,11 @@ class Routes
                 }
             break;
                 case "POST": 
-                    // verificar rota de contato
+                    if($this->route == "/registrar") {
+                        $inserirCliente = $this->registerController->inserirCliente($this->post);
+                        include_once "../app/views/register-page.php";
+                        exit;
+                    }
 
                     //verificar rota de login
     
