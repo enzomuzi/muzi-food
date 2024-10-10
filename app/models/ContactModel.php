@@ -9,20 +9,31 @@ class ContactModel
 
     public function __construct()
     {
-        $this->connect = new ConnectDb();
-        $this->connect = $this->connect->connection();
-    }
-
-    public function buscarContatos()
-    {
-        $result = mysqli_query($this->connection, "SELECT * FROM contacts");
-
-        if (!$result) {
-            echo "Erro ao executar consulta: " . mysqli_error($this->connection);
+        $this->connection = (new ConnectDb())->connection(); // Cria a conexão
+        if ($this->connection) {
+            echo "Conexão estabelecida com sucesso!";
         } else {
-            while ($row = mysqli_fetch_assoc($result)) {
-                print_r($row);
-            }
+            echo "Falha ao estabelecer conexão!";
         }
     }
+    
+    public function buscarContatos()
+{
+    $result = mysqli_query($this->connection, "SELECT * FROM contacts");
+
+    if (!$result) {
+        echo "Erro ao executar consulta: " . mysqli_error($this->connection);
+        return; // Adicione um return para sair da função em caso de erro
+    }
+
+    if (mysqli_num_rows($result) == 0) {
+        echo "Nenhum contato encontrado.";
+        return;
+    }
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        print_r($row);
+    }
+}
+
 }
