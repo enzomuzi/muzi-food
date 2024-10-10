@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../../config/database/ConnectDb.php';
-class ContactModel
+class OrdersModel
 {
     private $connect;
     public $connection;

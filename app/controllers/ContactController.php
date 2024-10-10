@@ -11,9 +11,4 @@ class ContactController
         // Instanciar o modelo de contato
         $this->model = new ContactModel();
     }
-
-    public function buscarContatos()
-    {
-        return $this->model->buscarContatos();
-    }
 }
