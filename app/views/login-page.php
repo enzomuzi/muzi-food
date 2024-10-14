@@ -28,9 +28,9 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
             <div class="navbar-nav mx-auto">
-                <a href="/index.php" class="nav-item nav-link" id="home-menu">Página Inicial</a>
-                <a href="/views/menu-page.php" class="nav-item nav-link" id="menu">Cardápio</a>
-                <a href="/views/contact-page.php" class="nav-item nav-link" id="contact-menu">Contato</a>
+                <a href="/home" class="nav-item nav-link" id="home-menu">Página Inicial</a>
+                <a href="/menu" class="nav-item nav-link" id="menu">Cardápio</a>
+                <a href="/contact" class="nav-item nav-link" id="contact-menu">Contato</a>
             </div>
         </div>
     </nav>
@@ -52,7 +52,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                     <div>
-                        <p>Não possui uma conta? <a href="/views/register-page.php">Registre-se</a> agora mesmo!</p>
+                        <p>Não possui uma conta? <a href="/register">Registre-se</a> agora mesmo!</p>
                     </div>
                 </form>
             </div>

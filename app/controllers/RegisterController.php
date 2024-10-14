@@ -39,8 +39,9 @@ class RegisterController
         if ($this->model->inserir($post)){
             // Retorna uma mensagem de sucesso caso a inserção seja realizada com sucesso.
             return 'Inserido com sucesso!';
-        }
-        // Opcional: Você pode adicionar uma mensagem de erro caso a inserção falhe.
+        } else {
+            // Opcional: Você pode adicionar uma mensagem de erro caso a inserção falhe.
         return 'Falha ao inserir o cliente.';
+        }
     }
 }

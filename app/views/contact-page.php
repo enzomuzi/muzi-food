@@ -29,37 +29,39 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
             <div class="navbar-nav mx-auto">
-                <a href="/index.php" class="nav-item nav-link" id="home-menu">Página Inicial</a>
-                <a href="/views/menu-page.php" class="nav-item nav-link" id="menu">Cardápio</a>
+                <a href="/home" class="nav-item nav-link" id="home-menu">Página Inicial</a>
+                <a href="/menu" class="nav-item nav-link" id="menu">Cardápio</a>
             </div>
             <div class="navbar-nav">
-                <a href="/views/login-page.php" class="nav-item nav-link" id="acess-menu">Login/Registrar</a>
+                <a href="/login" class="nav-item nav-link" id="acess-menu">Login/Registrar</a>
             </div>
         </div>
     </nav>
     <div class="row">
         <div class="col-md-6">
             <div class="d-flex flex-column align-items-center justify-content-center h-100">
+            <form class="row g-3" action="/contact" method="POST">
                 <div class="login-content" style="background-color: #fff; padding: 10rem;">
                     <h1>Entre em contato</h1>
                     <div class="mb-3">
                         <label for="formGroupExampleInput" class="form-label">Nome Completo</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira o seu nome">
+                        <input name="name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Insira o seu nome">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Email</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira o seu email">
+                        <input name="email" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira o seu email">
                     </div>
                     <div class="mb-3">
                         <label for="formGroupExampleInput2" class="form-label">Telefone</label>
-                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira o seu telefone">
+                        <input name="phone" type="text" class="form-control" id="formGroupExampleInput2" placeholder="Insira o seu telefone">
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 90px"></textarea>
+                        <textarea name="message" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 90px"></textarea>
                         <label for="floatingTextarea2">Mensagem</label>
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
+                </form>
             </div>
         </div>
         <div class="col-md-6">

@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/../app/controllers/ContactController.php';
 require_once __DIR__ . '/../app/controllers/RegisterController.php';
+require_once __DIR__ . '/../app/controllers/MenuController.php';
+
 
 class Routes 
 {
@@ -9,6 +11,7 @@ class Routes
     private $route;
     private $contactController; // -> variavel que sera utilizado para armazenar a instancia do controller
     private $registerController;
+    private $menuController;
     private $post;
 
     public function __construct()
@@ -17,6 +20,7 @@ class Routes
         $this->route = $_SERVER['REQUEST_URI'];
         $this->contactController = new ContactController();
         $this->registerController = new RegisterController();
+        $this->menuControler = new MenuController();
         $this->post = $_POST;
 
         $this->routes();
@@ -59,6 +63,24 @@ class Routes
                     if($this->route == "/registrar") {
                         $inserirCliente = $this->registerController->inserirCliente($this->post);
                         include_once "../app/views/register-page.php";
+                        exit;
+                    }
+
+                    if($this->route == "/menu") {
+                        $inserirProduto = $this->menuController->inserirProduto($this->post);
+                        include_once "../app/views/menu-page.php";
+                        exit;
+                    }
+
+                    if($this->route == "/menu") {
+                        $fazerPedido = $this->menuController->fazerPedido($this->post);
+                        include_once "../app/views/menu-page.php";
+                        exit;
+                    }
+
+                    if($this->route == "/contact") {
+                        $entrarContato = $this->contactController->entrarContato($this->post);
+                        include_once "../app/views/contact-page.php";
                         exit;
                     }
 

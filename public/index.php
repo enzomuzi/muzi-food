@@ -32,11 +32,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
             <div class="navbar-nav mx-auto">
-                <a href="./views/menu-page.php" class="nav-item nav-link" id="menu">Cardápio</a>
-                <a href="./views/contact-page.php" class="nav-item nav-link" id="contact-menu">Contato</a>
+                <a href="/menu" class="nav-item nav-link" id="menu">Cardápio</a>
+                <a href="/contact" class="nav-item nav-link" id="contact-menu">Contato</a>
             </div>
             <div class="navbar-nav">
-                <a href="./views/login-page.php" class="nav-item nav-link" id="acess-menu">Login/Registrar</a>
+                <a href="/login" class="nav-item nav-link" id="acess-menu">Login/Registrar</a>
             </div>
         </div>
     </nav>

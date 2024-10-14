@@ -14,4 +14,20 @@ class MenuController
         $this->model = new OrdersModel();
         $this->model = new ProductsModel();
     }
+
+    public function inserirProduto($post) {
+        if($this->model->inserir($post)) {
+            return 'Inserido com sucesso!';
+        } else {
+            return 'Falha ao inserir o produto.';
+        }
+    }
+
+    public function fazerPedido($post) {
+        if($this->model->fazer($post)) {
+            return 'Pedido realizado com sucesso!';
+        } else {
+            return 'Falha ao fazer pedido.';
+        }
+    }
 }

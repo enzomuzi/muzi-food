@@ -11,4 +11,12 @@ class ContactController
         // Instanciar o modelo de contato
         $this->model = new ContactModel();
     }
+
+    public function entrarContato($post) {
+        if($this->model->contato($post)) {
+            return 'Enviado com sucesso!';
+        } else {
+            return 'Falha ao enviar.';
+        }
+    }
 }
